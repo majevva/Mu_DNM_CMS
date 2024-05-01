@@ -1,0 +1,29 @@
+{
+	"quearies":{
+		"muemu":{
+			"title":"MUEMU Vip",
+			"db":"account",
+			"check":"SELECT Date, Type FROM T_VIPList WHERE AccountID = :account",
+			"update":"UPDATE T_VIPList SET Date = :until_date, Type = :type WHERE AccountID = :account",
+			"insert":"INSERT INTO T_VIPList (AccountID, Date, Type) VALUES (:account, :until_date, :type)",
+			"vip_codes":{
+				"vip_bronze":{
+					"title":"Bronze",
+					"code": 1
+				},
+				"vip_silver":{
+					"title":"Silver",
+					"code": 2
+				},
+				"vip_gold":{
+					"title":"Gold",
+					"code": 3
+				},
+				"vip_platinum":{
+					"title":"Platinum",
+					"code": 4
+				}
+			}
+		}
+	}
+}

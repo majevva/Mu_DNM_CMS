@@ -1,0 +1,69 @@
+{
+    "muemu": {
+		"title": "MUEMU",
+        "resets": {
+            "db": "game",
+            "table": "Character",
+            "column": "resets",
+            "identifier_column": "Name"
+        },
+        "grand_resets": {
+            "db": "game",
+            "table": "Character",
+            "column": "grand_resets",
+            "identifier_column": "Name"
+        },
+        "wcoins": {
+            "db": "game",
+            "table": "T_InGameShop_Point",
+            "column": "WCoinC",
+            "identifier_column": "AccountID"
+        },
+        "master_level": {
+            "db": "game",
+            "table": "Character",
+            "column": "mLevel",
+            "identifier_column": "Name"
+        },
+        "bc": {
+            "db": "Ranking",
+            "table": "EVENT_INFO_BC_5TH",
+            "column": "Point",
+            "identifier_column": "CharacterName"
+        },
+        "ds": {
+            "db": "Ranking",
+            "table": "EVENT_INFO",
+            "column": "Point",
+            "identifier_column": "CharacterName"
+        },
+        "cc": {
+            "db": "Ranking",
+            "table": "EVENT_INFO_CC",
+            "column": "Wins",
+			"column2": "PKillCount",
+			"column3": "MKillCount",
+            "identifier_column": "Name"
+        },
+        "cs": {
+            "db": "game",
+            "table": "",
+            "column": "",
+            "identifier_column": ""
+        },
+        "duels": {
+            "db": "game",
+            "table": "Character",
+            "column": "WinDuels",
+            "identifier_column": "Name",
+            "column2": "LoseDuels"
+        },
+		"monster_killcount": {
+            "db": "game",
+            "table": "C_Monster_KillCount",
+            "column": "count",
+            "identifier_column": "name",
+			"column2": "MonsterId"
+        }
+    }
+}

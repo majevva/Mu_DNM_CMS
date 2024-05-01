@@ -1,0 +1,1 @@
+NOTE: in the up_list.zip->Data\ folder u must put your own generated cVersion file, with your password, with corresponding version same as folder name (in this case 0.00.01)

@@ -1,0 +1,24 @@
+<% 
+if(typeof votereward != 'undefined'){ 
+if(votereward != false){
+%>
+<% for(var i=0; i<votereward.length; i++) { %>
+<li>
+	<div class="characters">
+		<span class="number"><%= i+1 %></span>
+		<h3><a href="<%= base_url %>character/<%= bin2hex(votereward[i].name) %>/<%= server_selected %>"><%= votereward[i].name %></a> <% if(config.voter.display_country == 1) { %><span class="f16"><span class="flag <%= votereward[i].country %>"></span></span><% } %></h3>
+		<span><%= App.lc.translate('Total Votes').fetch() %>: <%= votereward[i].totalvotes %></span>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+</li>
+<% } %>
+<% 
+}
+else{
+%>
+<div class="i_note"><%= App.lc.translate('No Players Found').fetch() %></div>
+<%
+}
+} 
+%>

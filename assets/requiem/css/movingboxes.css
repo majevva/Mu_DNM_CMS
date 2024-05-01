@@ -1,0 +1,166 @@
+/*** Overall MovingBoxes Slider ***/
+.mb-wrapper {
+	margin: 0 auto 40px;
+	position: relative;
+	top: 0px;
+	width: 1010px !important;
+	height: 160px;
+}
+
+li.mb-panel { 
+	width: 330px;
+	max-height: 160px;
+	margin: 0 0px !important;
+	display: inline-block;
+}
+
+.mb-inside {
+	width: 330px;
+	max-height: 160px;
+	display: block;
+	-webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+    border: 1px solid rgba(255,255,255,0.2);
+    -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition:all 0.3s ease; 
+	-o-transition:all 0.3s ease; 
+	-moz-transition:all 0.3s ease; 
+	transition:all 0.3s ease;
+}
+
+li.mb-panel .mb-inside iframe {
+	width: 100%;
+	height: 100%;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+li.mb-panel.current .mb-inside {
+	-webkit-transform: scale(1.0);
+    -moz-transform: scale(1.0);
+    -o-transform: scale(1.0);
+    transform: scale(1.0);
+}
+
+span.activePlay {
+	position: absolute;
+	width: 330px;
+	height: 160px;
+	display: block;
+	background: url(../images/play.png)/*tpa=http://lostdream.ws/templates/lostdream/images/play.png*/;
+    top: 0px;
+    -webkit-transition:all 0.3s ease; 
+	-o-transition:all 0.3s ease; 
+	-moz-transition:all 0.3s ease; 
+	transition:all 0.3s ease;
+}
+
+span.activePlay:hover {
+	cursor: pointer;
+	-webkit-filter:brightness(1.2); 
+	-moz-filter:brightness(1.2); 
+	-o-filter:brightness(1.2); 
+	filter:brightness(1.2); 
+}
+
+span.activePlay p {
+	position: absolute;
+	display: block;
+	width: 330px;
+	top: 119px;
+	left: 10px;
+	color: #dad0d0;
+	font-size: 12px;
+	font-family: "PTSansBold";
+}
+/* Panel Wrapper */
+.mb-scroll {
+	height: 170px !important;
+	overflow: hidden;
+	margin: 0 auto;
+	position: relative;
+	padding-left: 0px !important;
+    width: 930px;
+}
+.mb-slider  {
+	height: 170px !important;
+	overflow: hidden;
+	margin: 0 auto;
+	position: relative;
+	padding-left: 0px !important;
+}
+
+/* active slider border highlight */
+
+/*** Slider panel ***/
+.mb-slider {
+	margin: 0;
+	padding: 0px;
+	display: block;
+	cursor: pointer;
+	float: left;
+	list-style: none;
+}
+
+/* Cursor to arrow over current panel, pointer for all others,
+change .current class name using plugin option, currentPanel : 'current' */
+.mb-slider .mb-panel.current {
+	cursor: auto;
+}
+
+/*** Inside the panel ***/
+.mb-inside {
+	padding: 0px;
+}
+
+.mb-inside * {
+	max-width: 100%;
+}
+/*** Left & Right Navigation Arrows ***/
+a.mb-scrollButtons {
+	display: block;
+	width: 28px;
+	height: 55px;
+	position: absolute;
+	top: 50%;
+	margin-top: -32px; /* if you change the arrow images, you may have to adjust this (1/2 height of arrow image) */
+	cursor: pointer;
+	text-decoration: none;
+	outline: 0;
+	border: 0;
+	opacity: 0.5;
+}
+
+a.mb-scrollButtons:hover {
+	opacity: 1;
+}
+
+a.mb-scrollButtons.mb-left {
+	background: url(../images/prev.png)/*tpa=http://lostdream.ws/templates/lostdream/images/prev.png*/;
+	left: 0px;
+	z-index:2;
+}
+a.mb-scrollButtons.mb-right {
+	background: url(../images/next.png)/*tpa=http://lostdream.ws/templates/lostdream/images/next.png*/;
+	right: 0px;
+	z-index:2;
+}
+
+a.mb-scrollButtons.disabled {
+	display: none;
+}
+
+/*** Controls added below the panels ***/
+.mb-controls {
+	display: none;
+}
+
+.sliderOverflow {
+	position: relative;
+	margin: 0 auto;
+}

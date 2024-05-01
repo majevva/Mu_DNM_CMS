@@ -1,0 +1,59 @@
+html, body {
+  background: #28334C;
+}
+
+.header {
+  background-image: url(../images/bg-header-salat.jpg);
+}
+
+.servers .server {
+  color: #FF2638;
+}
+
+.btn-download {
+  background-image: url(../images/btn-download-salat.png);
+}
+
+.header .sidebar {
+  background: rgba(71, 85, 117, 0.64);
+}
+
+.forum .date {
+  color: #28334C;
+}
+.forum .avatar img {
+  border-color: #28334C;
+}
+
+.news .info {
+  color: #374565;
+}
+.regbutton, .chbutton, .button, input[name="bill"], input[name="bonus"], #chbutton,
+.news .more a {
+}
+
+.tops-nav a:hover, .tops-nav a.active {
+  background-color: #28334C;
+}
+
+#pager a {
+  background: #3B4763;
+}
+#pager a.nopager, #pager a:hover {
+  background: #425580;
+  color: #FFF;
+}
+
+.copy p {
+  color: #84a79f;
+}
+
+.footer .container {
+  border-color: #343F5A;
+}
+.scroll::before {
+  background-color: #28334C;
+}
+.scroll::after {
+  border-color: #35689E;
+}

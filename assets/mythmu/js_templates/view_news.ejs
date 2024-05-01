@@ -1,0 +1,34 @@
+<% 
+if(typeof news == 'undefined' || news.length == 0){ 
+%>
+	<div style="padding: 0 30px 0px 50px;"><div class="i_note">No News Articles</div></div>
+<% } else{ 
+	for(var i=0; i<news.length; i++){
+%>
+<div class="box-style1" style="margin-bottom:25px;">
+	<h2 class="title"><%=news[i].title %></h2>
+	<div class="entry">
+		<p class="text-align"><%=news[i].content %></p>
+		<div class="meta-bg">
+			<div class="meta">
+				<%
+					var d = new Date(news[i].time*1000);
+					var time_string = d.getDate() + ' / ' + ('0' + (d.getMonth()+1)).slice(-2) + ' / ' + d.getFullYear();
+				%>
+				<p class="tags">Posted <%=time_string %></p>
+				<% if(config.storage != 'dmn'){ %>
+				<p class="links"><span class="comments"><a href="<%=news[i].url %>" target="_blank">Discuss On Forum</a></span></p>
+				<% } %>
+			</div>
+		</div>
+	</div>
+</div>	
+<%
+	}
+%>
+<% if(typeof pagination != 'undefined'){ %>
+<div style="padding:10px;text-align:center;">
+	<table style="width: 100%;"><tr><td><%=pagination %></td></tr></table>
+</div>	
+<% }} %>
+

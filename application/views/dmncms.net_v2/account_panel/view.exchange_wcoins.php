@@ -1,0 +1,130 @@
+<?php
+	$this->load->view($this->config->config_entry('main|template').DS.'view.header');
+	$this->load->view($this->config->config_entry('main|template').DS.'view.left_sidebar');
+?>	                     
+<div class="news_main">
+	<div class="heding">
+		<h2><?php echo _('Exchange Wcoins'); ?></h2>
+	</div>
+	<div class="content_rght_info m5">
+		<div class="other">
+            <h2 class="title">
+				<?php echo _('Exchange'); ?> <?php echo $this->website->translate_credits($wcoin_config['credits_type'], $this->session->userdata(array('user' => 'server'))); ?> <?php echo _('To Wcoins'); ?>				
+			</h2>
+			<div class="entry">
+                <?php
+                if (isset($error)) {
+                    echo '<div class="e_note">' . $error . '</div>';
+                }
+                if (isset($success)) {
+                    echo '<div class="s_note">' . $success . '</div>';
+                }
+                ?>
+                <script type="text/javascript">
+                    var total = 0,
+                        price_credits = parseInt(<?php echo $wcoin_config['reward_coin'];?>);
+                    var amountof = ['<?php echo $this->website->translate_credits($wcoin_config['credits_type'], $this->session->userdata(array('user' => 'server')));?>', '<?php echo _('WCoins');?>'], willreceive = ['<?php echo _('WCoins');?>', '<?php echo $this->website->translate_credits($wcoin_config['credits_type'], $this->session->userdata(array('user' => 'server')));?>'];
+
+                    function calculateWCoins(val) {
+                        if ((val.toString().search(/^-?[0-9]+$/) != 0)) {
+                            $('#credits').val('0');
+                            $('#wcoins').val('0');
+                            if (typeof $('#exchange_wcoins').attr("disabled") == 'undefined' || $('#exchange_wcoins').attr("disabled") == false) {
+                                $('#exchange_wcoins').attr("disabled", "disabled");
+                            }
+                        }
+                        else {
+                            if(val >=  <?php echo $wcoin_config['min_rate'];?>){
+                                if(price_credits < 0){
+                                    total = parseInt(val) * Math.abs(price_credits);
+                                }
+                                else{
+                                    total = parseInt(val) / price_credits;
+                                }
+                                $('#wcoins').val(Math.floor(total));
+                                if (($('#wcoins').val() != 0)) {
+                                    $('#exchange_wcoins').removeAttr("disabled");
+                                }
+                            }
+                            else{
+                                $('#wcoins').val(0);
+                                $('#exchange_wcoins').attr("disabled", "disabled");
+                            }
+                        }
+                    }
+
+                    $(document).ready(function () {
+                        $('#exchange_type').on('change', function () {
+                            if ($(this).val() == 1) {
+                                $('#amountof').html(amountof[0]);
+                                $('#willreceive').html(willreceive[0])
+                            }
+                            else {
+                                $('#amountof').html(amountof[1]);
+                                $('#willreceive').html(willreceive[1])
+                            }
+                        });
+                    });
+                </script>
+                <div class="i_note"><?php echo vsprintf(_('Minimal exchange rate is %d %s'), array($wcoin_config['min_rate'], $this->website->translate_credits($wcoin_config['credits_type'], $this->session->userdata(array('user' => 'server'))))); ?></div>
+                <div class="i_note"><?php echo _('Exchange rate forumula'); ?>:
+                    <?php
+                    if($wcoin_config['reward_coin'] > 0){
+                        echo '1 '.$this->website->translate_credits($wcoin_config['credits_type'], $this->session->userdata(array('user' => 'server'))).' / '.$wcoin_config['reward_coin'];
+                    }
+                    else{
+                        echo '1 '.$this->website->translate_credits($wcoin_config['credits_type'], $this->session->userdata(array('user' => 'server'))).' * '.abs($wcoin_config['reward_coin']);
+                    }
+                    ?>
+                </div>
+                <div class="form">
+                    <form method="POST" action="" id="wcoin_form" name="wcoin_form">
+                        <table>
+                            <?php if ($wcoin_config['change_back'] == 1) { ?>
+                                <tr>
+                                    <td style="width:150px;"><?php echo _('Exchange Type'); ?>
+                                        :
+                                    </td>
+                                    <td>
+                                        <select name="exchange_type" id="exchange_type">
+                                            <option
+                                                value="1"><?php echo $this->website->translate_credits($wcoin_config['credits_type'], $this->session->userdata(array('user' => 'server'))); ?> <?php echo _('To'); ?> <?php echo _('WCoins'); ?></option>
+                                            <option
+                                                value="2"><?php echo _('WCoins'); ?> <?php echo _('To'); ?> <?php echo $this->website->translate_credits($wcoin_config['credits_type'], $this->session->userdata(array('user' => 'server'))); ?></option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            <?php } ?>
+                            <tr>
+                                <td style="width:150px;"><?php echo _('Amount of'); ?>
+                                    <span
+                                        id="amountof"><?php echo $this->website->translate_credits($wcoin_config['credits_type'], $this->session->userdata(array('user' => 'server'))); ?></span>:
+                                </td>
+                                <td><input type="text" id="credits" name="credits" value="" class="text"
+                                           onblur="calculateWCoins($('#credits').val());"
+                                           onkeyup="calculateWCoins($('#credits').val());"/></td>
+                            </tr>
+                            <tr>
+                                <td><?php echo _('Will Receive'); ?> <span
+                                        id="willreceive"><?php echo _('WCoins'); ?></span>:
+                                </td>
+                                <td><input type="text" id="wcoins" name="wcoins" value="" class="text" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <button type="submit" id="exchange_wcoins" name="exchange_wcoins"
+                                            disabled="disabled"
+                                            class="flatbtn-blu m5_top"><?php echo _('Submit'); ?></button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>                 
+<?php
+	$this->load->view($this->config->config_entry('main|template').DS.'view.footer');
+?>	

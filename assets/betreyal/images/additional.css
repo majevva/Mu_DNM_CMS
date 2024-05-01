@@ -1,0 +1,234 @@
+#navibar {
+    width: 100%;
+    height: 45px;
+    background: url(navi.jpg);
+    overflow: hidden;
+}
+#navibar2 {
+    width: 100%;
+    height: 9px;
+    background: url(navibt.jpg);
+    overflow: hidden;
+}
+#navileft {
+    width: 20%;
+    float: left;
+    height: 45px;
+}
+#naviright {
+    float: right;
+    width: 20%;
+    height: 45px;
+}
+#navicenter {
+    width: 60%;
+    float: left;
+    height: 45px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+}
+#open {
+    position: absolute;
+    z-index: 11;
+    top: 20px;
+    left: 50%;
+    display: block;
+    width: 26px;
+    height: 17px;
+    margin-left: -6px;
+    background: url(up.png);
+    transition: all 0.5s ease;
+}
+nav {
+    float: right;
+    margin-right: 80px;
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    /* position: relative; */
+}
+nav ul li {
+    display: inline-block;
+    /* background-color: #291715; */
+    /* border-bottom: 1px solid #38221F; */
+}
+nav a {
+    display: block;
+    padding: 23px;
+    color: #D49B52;
+    font-size: 13px;
+    line-height: 5px;
+    font-family: Myriad Pro;
+    text-decoration: none;
+    text-shadow: rgba(0, 0, 0, 0.66) 0px 1px 2px;
+}
+nav a:hover {
+    background-color: #281818;
+    color: #fff;
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px #151313;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.53), 0px 3px 10px rgba(0, 0, 0, 0.51), 0px 2px 2px rgba(0, 0, 0, 0.26), 0px 1px 12px rgba(0, 0, 0, 0.38);
+}
+/* Hide Dropdowns by Default */
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 45px;
+    /* the height of the main nav */
+    width: 170px;
+}
+/* Display Dropdowns on Hover */
+
+nav ul li:hover > ul {
+    display: inherit;
+}
+/* Fisrt Tier Dropdown */
+
+nav ul ul li {
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+/* Second, Third and more Tiers	*/
+
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 170px;
+}
+/* Change this in order to change the Dropdown symbol */
+
+li > a:after {
+    content: ' ';
+}
+li > a:only-child:after {
+    content: '';
+}
+nav ul ul li {
+    display: inline-block;
+    background-color: #532821;
+    border-bottom: 1px solid #712E24;
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px #5F271F;
+    text-shadow: 0px 1px 1px #000000, 0px 3px 10px rgb(0, 0, 0), 0px 2px 2px rgba(0, 0, 0, 0.26), 0px 1px 12px rgb(255, 1, 1);
+}
+#event_title {
+    float: left;
+    color: #fff;
+    color: #bb8321;
+    font-size: 11px;
+    font-family: Helvetica;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+#event_progress {
+    width: 100%;
+    height: 15px;
+    margin-top: 13px;
+    -moz-box-shadow: inset 0 0 5px #000000;
+    /* -webkit-box-shadow: inset 0 0 5px #000000; */
+    /* box-shadow: inset 0 0 5px #000000; */
+    
+    background: url(event_bar.png);
+}
+#event_area {
+    width: 85px;
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 7px;
+}
+#event_bg {
+    width: 97px;
+    height: 40px;
+    margin-top: 7px;
+    background: url(event.png);
+    float: left;
+    /* padding-right: 2px; */
+}
+#info {
+    float: left;
+    display: inline;
+    width: 198px;
+    height: 32px;
+    line-height: 16px;
+    margin-top: 5px;
+    padding: 3px;
+    margin-right: 20px;
+    font-family: arial;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #aeaeae;
+    =: 1px solid #211515;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    font-size: 11px;
+    font-family: Myriad Pro;
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px #000000;
+}
+#time {
+    float: left;
+    color: #C8681E;
+    width: 87px;
+}
+#name {
+    width: 91px;
+    height: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #8A8A7E;
+    font-size: 10px;
+    font-family: Myriad Pro;
+    text-align: center;
+    float: left;
+    background: #302420;
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px #000000;
+}
+#set1 {
+    width: 91px;
+    height: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #D0C8B9;
+    float: left;
+    text-align: center;
+    background: #9C2317;
+    margin-bottom: 2px;
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px #821313;
+    text-shadow: 0px 1px 1px #000000, 0px 3px 10px rgb(0, 0, 0), 0px 2px 2px rgba(0, 0, 0, 0.26), 0px 1px 12px rgb(255, 1, 1);
+}
+#set2 {
+    width: 91px;
+    height: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #E0D4BF;
+    float: left;
+    text-align: center;
+    background: #73732C;
+    margin-bottom: 2px;
+    -moz-box-shadow: inset 0 0 10px #4E4E2E;
+    -webkit-box-shadow: inset 0 0 10px #4E4E2E;
+    box-shadow: inset 0 0 10px #4E4E2E;
+    text-shadow: 0px 1px 1px #000000, 0px 3px 10px rgb(0, 0, 0), 0px 2px 2px rgba(0, 0, 0, 0.26), 0px 1px 12px rgb(232, 220, 123);
+}
+#info div {
+    margin-left: 5px;
+}
+

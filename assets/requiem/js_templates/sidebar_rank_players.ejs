@@ -1,0 +1,35 @@
+<% 
+if(typeof players != 'undefined'){ 
+if(players != false){
+%>
+<table class="table mix PvP" style="text-align: center;">
+	<thead>
+    <tr>
+        <th style="width: 101px">Nick</th>
+        <th style="padding-left: 0;padding-right: 0;">Level</th>
+        <th>Reset</th>
+    </tr>
+    </thead><tbody>
+	<% for(var i=0; i<players.length; i++) { %>
+	<tbody>
+            <tr  style="text-align: center;" class="msg">
+            <td><a href="<%= base_url %>character/<%= bin2hex(players[i].name) %>/<%= server_selected %>"><%= players[i].name %></a></td>
+                        <td><%= players[i].level %></td>
+            <td><% if(config.player.display_resets == 1) { %><%= players[i].resets %><%}%></td>
+                    </tr>
+    
+    </tbody>
+	
+	
+	<% } %>
+</tbody>
+</table>
+<% 
+}
+else{
+%>
+<div class="i_note"><%= App.lc.translate('No Players Found').fetch() %></div>
+<%
+}
+} 
+%>

@@ -1,0 +1,27 @@
+<% if(typeof downloads == 'undefined' || downloads.length == 0){ %>
+	<div style="padding: 0 30px 0px 50px;"><div class="i_note">Currently no download links added</div></div>';
+<% } else{
+	for(var i=0; i<downloads.length; i++){
+%>
+	<div class="box-style1" style="margin-bottom: 20px;">
+		<h2 class="title"><%=downloads[i].link_name%></h2>
+		<div class="entry">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+				<tr>
+					<td align="left" style="padding-bottom: 10px; padding-left: 20px;">
+						Description: <b><%=downloads[i].link_desc%></b><br />
+						Size: <b><%=downloads[i].link_size%></b><br />
+						Type: <b><%=downloads[i].link_type%></b><br />
+					</td>
+					<td width="200px" align="right"><a href="<%=downloads[i].link_url%>" target="_blank"><img src="<%=base_url%>assets/<%=web_template%>/images/download.png" title="Download" border="0"></a></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+<%
+	}
+}
+%>
+
+
+	

@@ -1,0 +1,21 @@
+@font-face {
+    font-weight: 700;
+    font-family: 'PT Sans';
+    src: url('../fonts/PTSansbold.eot');
+    src: url('../fonts/PTSansbold.eot') format('embedded-opentype'),
+         url('../fonts/PTSansbold.woff2') format('woff2'),
+         url('../fonts/PTSansbold.woff') format('woff'),
+         url('../fonts/PTSansbold.ttf') format('truetype'),
+         url('../fonts/PTSansbold.svg#PTSansbold') format('svg');
+}
+
+@font-face {
+    font-weight: 400;
+    font-family: 'PT Sans';
+    src: url('../fonts/PTSans.eot');
+    src: url('../fonts/PTSans.eot') format('embedded-opentype'),
+         url('../fonts/PTSans.woff2') format('woff2'),
+         url('../fonts/PTSans.woff') format('woff'),
+         url('../fonts/PTSans.ttf') format('truetype'),
+         url('../fonts/PTSans.svg#PTSans') format('svg');
+}

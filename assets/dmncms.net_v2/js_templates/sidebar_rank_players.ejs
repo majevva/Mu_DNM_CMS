@@ -1,0 +1,25 @@
+<% 
+if(typeof players != 'undefined'){ 
+if(players != false){
+%>
+<% for(var i=0; i<players.length; i++) { %>
+<li>
+	<div class="characters">
+		<span class="number"><%= i+1 %></span>
+		<h3><a href="<%= base_url %>character/<%= bin2hex(players[i].name) %>/<%= server_selected %>"><%= players[i].name %></a> <% if(config.player.display_country == 1) { %><span class="f16"><span class="flag <%= players[i].country %>"></span></span><% } %></h3>
+		<span><%= App.lc.translate('LvL').fetch() %><% if(config.player.display_master_level == 1) { %>[<font style="color: red;"><%=App.lc.translate('ML').fetch() %></font>]<%}%> <%= players[i].level %><% if(config.player.display_master_level == 1) { %>[<font style="color: red;"><%= players[i].mlevel %></font>]<%}%></span>
+		<span><% if(config.player.display_resets == 1) { %><%= App.lc.translate('Res').fetch() %><%}%><% if(config.player.display_gresets == 1) { %>[<font style="color: red;"><%= App.lc.translate('GR').fetch() %></font>]<%}%> <% if(config.player.display_resets == 1) { %><%= players[i].resets %><%}%><% if(config.player.display_gresets == 1) { %>[<font style="color: red;"><%= players[i].gresets %></font>]<%}%></span>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+</li>
+<% } %>
+<% 
+}
+else{
+%>
+<div class="i_note"><%= App.lc.translate('No Players Found').fetch() %></div>
+<%
+}
+} 
+%>

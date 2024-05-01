@@ -1,0 +1,39 @@
+
+<html>
+<head>
+	<title> Official MU Online </title>
+	<style type="text/css">
+	body, html { margin:0; border:0; overflow:hidden; }
+	img { border:none; vertical-align:top; }
+	#banner_l {width:448px;background: url('http://image.webzen.com/Global/Mu/launcher/bg_banner.gif') left top no-repeat; padding:1px; border:3px solid #3f3f41; display:inline-block; }
+	</style>
+	<script>
+		function _banner() {
+			var json = [];
+			json = [{"href":"http://muonline.webzen.com/news/events/5485/mom-loves-your-hard-effort","img":"http://upload.webzen.com/Files/Clara/portal-inquiry-notice/2014/05/06/20140506YV6JDC7LNXP7KQOJ.jpg"},{"href":"http://muonline.webzen.com/news/events/5468/egg-of-monsters-3rd-generation-2014?page=1","img":"http://upload.webzen.com/Files/Clara/portal-inquiry-notice/2014/04/21/20140421UKR3ZBVOU64XZW8L.jpg"},{"href":"http://forums.webzen.com/Forum171.aspx","img":"http://upload.webzen.com/Files/Clara/portal-inquiry-notice/2013/10/09/201310092TQEXDLBHXAP0W6Y.jpg"}];
+			var img = "";
+			var href = "/";
+			var num = 0;
+			if(json.length==0)
+			{
+				img = "http://image.webzen.com/Global/Mu/launcher/banner.jpg";
+			}
+			else
+			{
+				num = Math.floor(Math.random() * (json.length));
+				href = json[num].href;
+				img = json[num].img;
+			}
+			
+			document.write('<a href="'+href+'" hideFocus target="_blank"><img src="'+img+'" width="448" height="244" alt=""/></a>');
+		}
+	</script>
+</head>
+<body oncontextmenu='return false' ondragstart='return false' onselectstart='return false'>
+    <div id="banner_l">
+		<script>
+			_banner();
+		</script>
+	</div> 
+</body>
+</html>

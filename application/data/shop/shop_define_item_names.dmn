@@ -1,0 +1,200 @@
+; Item names which not exists in server item file
+; [12-11] - [item category-item id]
+; 1 = "Summoning Stone Golen" - item_lvl = "item name"
+[12-11]
+1 = "Summoning Stone Golen"
+2 = "Summoning Assassin"
+3 = "Summoning Bali"
+4 = "Summoning Soldier"
+5 = "Summoning Yeti"
+6 = "Summoning Dark Knight"
+
+[12-26]
+1 = "Red Crystal"
+2 = "Blue Crystal"
+3 = "Dark Crystal"
+4 = "Box of Teasure"
+5 = "Box of Surprise"
+
+[12-30]
+1 = "Bundler of Jewel of Bless +20"
+2 = "Bundler of Jewel of Bless +30"
+
+[12-31]
+1 = "Bundler of Jewel of Soul +20"
+2 = "Bundler of Jewel of Soul +30"
+
+[13-7]
+1 = "Sperman"
+
+[13-10]
+1 = "Ring of Transformation Gigant"
+2 = "Ring of Transformation Skeleton"
+3 = "Ring of Transformation Bull"
+4 = "Ring of Transformation Linch"
+5 = "Ring of Transformation Death Cow"
+
+[13-11]
+1 = "Life Stone"
+
+[13-14]
+1 = "Crest of Monarch"
+
+[13-15]
+1 = "Agility Fruit"
+2 = "Stamina Fruit"
+3 = "Energy Fruit"
+4 = "Command Fruit"
+
+[13-16]
+1 = "Blood Scroll +1"
+2 = "Blood Scroll +2"
+3 = "Blood Scroll +3"
+4 = "Blood Scroll +4"
+5 = "Blood Scroll +5"
+6 = "Blood Scroll +6"
+7 = "Blood Scroll +7"
+8 = "Blood Scroll +8"
+
+[13-17]
+1 = "Blood Bone +1"
+2 = "Blood Bone +2"
+3 = "Blood Bone +3"
+4 = "Blood Bone +4"
+5 = "Blood Bone +5"
+6 = "Blood Bone +6"
+7 = "Blood Bone +7"
+8 = "Blood Bone +8"
+
+[13-18]
+1 = "Blood Castle Invitation +1"
+2 = "Blood Castle Invitation +2"
+3 = "Blood Castle Invitation +3"
+4 = "Blood Castle Invitation +4"
+5 = "Blood Castle Invitation +5"
+6 = "Blood Castle Invitation +6"
+7 = "Blood Castle Invitation +7"
+8 = "Blood Castle Invitation +8"
+
+[13-19]
+1 = "Divine Sword of Archangel"
+2 = "Divine Crossbow of Archangel"
+
+[13-20]
+1 = "Ring of Warrior 40"
+2 = "Ring of Warrior 80"
+
+[13-31]
+1 = "Dark Spirit of Raven"
+
+[13-49]
+1 = "Old Pergamin +1"
+2 = "Old Pergamin +2"
+3 = "Old Pergamin +3"
+4 = "Old Pergamin +4"
+5 = "Old Pergamin +5"
+6 = "Old Pergamin +6"
+
+[13-50]
+1 = "Illusion Blood +1"
+2 = "Illusion Blood +2"
+3 = "Illusion Blood +3"
+4 = "Illusion Blood +4"
+5 = "Illusion Blood +5"
+6 = "Illusion Blood +6"
+
+[13-51]
+1 = "Illusion Pergamin +1"
+2 = "Illusion Pergamin +2"
+3 = "Illusion Pergamin +3"
+4 = "Illusion Pergamin +4"
+5 = "Illusion Pergamin +5"
+6 = "Illusion Pergamin +6"
+
+[14-7]
+1 = "Potion of Soul"
+
+[14-9]
+1 = "Olivas"
+
+[14-11]
+1 = "Star"
+2 = "FireCracker"
+3 = "Heart Of Love"
+5 = "Silver Medal"
+6 = "Gold Medal"
+7 = "Box Of Heaven"
+8 = "Box of Kundun +1"
+9 = "Box of Kundun +2"
+10 = "Box of Kundun +3"
+11 = "Box of Kundun +4"
+12 = "Box of Kundun +5"
+13 = "Heart Of Lord"
+
+[14-12]
+1 = "Heart"
+2 = "Pergamin"
+
+[14-17]
+1 = "Devils Eye +1"
+2 = "Devils Eye +2"
+3 = "Devils Eye +3"
+4 = "Devils Eye +4"
+5 = "Devils Eye +5"
+6 = "Devils Eye +6"
+7 = "Devils Eye +7"
+
+[14-18]
+1 = "Devils Key +1"
+2 = "Devils Key +2"
+3 = "Devils Key +3"
+4 = "Devils Key +4"
+5 = "Devils Key +5"
+6 = "Devils Key +6"
+7 = "Devils Key +7"
+
+[14-19]
+1 = "Devil Square Invitation +1"
+2 = "Devil Square Invitation +2"
+3 = "Devil Square Invitation +3"
+4 = "Devil Square Invitation +4"
+5 = "Devil Square Invitation +5"
+6 = "Devil Square Invitation +6"
+7 = "Devil Square Invitation +7"
+
+[14-21]
+1 = "Stone"
+3 = "Sing of Lord"
+
+[14-23]
+1 = "Ring of Honor"
+
+[14-24]
+1 = "Dark Stone"
+
+[14-28]
+1 = "Lost Map +1"
+2 = "Lost Map +2"
+3 = "Lost Map +3"
+4 = "Lost Map +4"
+5 = "Lost Map +5"
+6 = "Lost Map +6"
+7 = "Lost Map +7"
+
+[14-29]
+1 = "Sign of Kundum +1"
+2 = "Sign of Kundum +2"
+3 = "Sign of Kundum +3"
+4 = "Sign of Kundum +4"
+5 = "Sign of Kundum +5"
+6 = "Sign of Kundum +6"
+7 = "Sign of Kundum +7"
+
+[14-32]
+1 = "Pink Candy"
+
+[14-33]
+1 = "Orange Candy"
+
+[14-34]
+1 = "Blue Candy"

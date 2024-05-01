@@ -1,0 +1,13 @@
+{
+    "type": 3,
+    "key": "",
+    "tasks": {
+        "VoteMonthlyReward": "5 0 1 * *",
+		"RemoveExpiredVip": "30 * * * *",
+		"RemoveNotVerifiedAccounts": "0 12 * * 0",
+		"RemoveBans": "*/20 * * * *",
+		"CheckBans": "*/30 * * * *",
+		"BulkEmail": "*/15 * * * *",
+		"ParseMMOTOPVotes": "59 * * * *"
+    }
+}

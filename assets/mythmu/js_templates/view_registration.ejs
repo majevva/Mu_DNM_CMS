@@ -1,0 +1,98 @@
+<div class="box-style1" style="margin-bottom:55px;">
+	<h2 class="title">Create your account in just few clicks</h2>
+	<div class="entry">
+		<div class="form">
+			<form method="post" action="<%=base_url%>registration" id="registration_form">
+				<table>
+					<tr>
+						<td style="width: 150px;">Username:</td>
+						<td>
+							<input class="validate[required,custom[onlyLetterNumber],minSize[3],maxSize[10],ajax[ajaxUsernameCall]]" type="text" name="user" id="user" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td>
+							<input class="validate[required,custom[email],maxSize[50],ajax[ajaxEmailCall]]" type="text" name="email" id="email" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td>Password:</td>
+						<td>
+							<input class="validate[required,minSize[3],maxSize[10]]" type="password" name="pass" id="pass" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td>Repeat Password:</td>
+						<td>
+							<input class="validate[required,minSize[3],maxSize[10],equals[pass]]" type="password" name="rpass" id="rpass" value="" />
+						</td>
+					</tr>
+					<% if(typeof show_ref != 'undefined' && show_ref == true){ %>
+					<tr>
+						<td>Refferer:</td>
+						<td>
+							<input type="text" name="refferer" id="refferer" value="<%=ref%>" readonly />
+						</td>
+					</tr>
+					<% } %>
+					<tr>
+						<td colspan="2" align="left">
+							<input class="validate[required]" type="checkbox" name="rules" id="rules" />
+							I have read and agree to the <a href="" id="rules_dialog"><b>game rules.</b></a>
+						</td>
+					</tr>
+					<% if(config.use_jscaptcha == 1){ %>
+					<tr>
+						<td>Security:</td>
+						<td><div class="QapTcha"></div></td>
+					</tr>
+					<% } %>
+					<% if(config.use_recaptcha == 1){ %>
+					<script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+					<tr>
+						<td>Security:</td>
+						<td><div id="recaptcha_div"></div></td>
+					</tr>
+					<% } %>
+					<tr>
+						<td>
+						</td>
+						<td>
+							<button type="submit" class="button-style">Submit</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	<% if(config.use_jscaptcha == 1){ %>
+	App.buildCaptcha('.QapTcha');
+	<% } %>
+	<% if(config.use_recaptcha == 1){ %>
+	Recaptcha.create("<%=config.recaptcha_pub_key%>",
+		"recaptcha_div",
+		{
+		  theme: "red",
+		  callback: Recaptcha.focus_response_field
+		}
+	 );
+	$.extend(DmNConfig, {use_recaptcha: 1});
+	<% } %>
+	$("#registration_form").validationEngine('attach', {
+		scroll: false,
+		onValidationComplete: function(form, status){
+			if(status == true){
+				App.registerAccount(form);
+			}
+		}  
+	});
+	$("#rules_dialog").on('click', function(e){
+		e.preventDefault();
+		App.initializeRulesDialog();
+	});
+});
+</script>

@@ -1,0 +1,24 @@
+<% 
+if(typeof killer != 'undefined'){ 
+if(killer != false){
+%>
+<% for(var i=0; i<killer.length; i++) { %>
+<li>
+	<div class="characters">
+		<span class="number"><%= i+1 %></span>
+		<h3><a href="<%= base_url %>character/<%= bin2hex(killer[i].name) %>/<%= server_selected %>"><%= killer[i].name %></a> <% if(config.killer.display_country == 1) { %><span class="f16"><span class="flag <%= killer[i].country %>"></span></span><% } %></h3>
+		<span><%= App.lc.translate('PK Count').fetch() %>: <%= killer[i].PkCount %></span>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+</li>
+<% } %>
+<% 
+}
+else{
+%>
+<div class="i_note"><%= App.lc.translate('No Players Found').fetch() %></div>
+<%
+}
+} 
+%>

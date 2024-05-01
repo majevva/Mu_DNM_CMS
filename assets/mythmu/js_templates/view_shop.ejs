@@ -1,0 +1,103 @@
+<div class="box-style1" style="margin-bottom: 20px;">
+	<h2 class="title">View Items</h2>
+	<div class="entry" >
+		<div id="ucp_info">
+			<div style="padding:3px;text-align: center;">
+				<%=categories%>
+			</div>
+		</div>
+		<% 
+		if(typeof error != 'undefined'){ 
+		%>
+			<div style="clear:left;"></div><div class="e_note"><%=error%></div>
+		<%
+		}
+		else{
+			if(typeof items != 'undefined' && items.length > 0){ 
+		%>
+			<table class="item_table" style="padding-top:10px;">
+			<%
+			for(var i=0; i<items.length; i++){
+				if(items[i].pos == 1){
+			%>
+			<tr style="text-align:center;">
+			<% } %>
+				<td>
+					<table class="each_item">
+						<tr>
+							<td class="item_name"><div class="items"><a id="shop_item_title_<%=items[i].id%>" href="" data-name="<%=items[i].name%>" data-info="<%=items[i].name%>&lt;br /&gt;<%=items[i].class%>"><%=set_limit(items[i].name, 15, '...')%></a></div></td>
+						</tr>
+						<tr>
+							<td class="item_bg"><div class="item_image"><%=items[i].image%></div></td>
+						</tr>
+						<tr><td class="item_footer"></td></tr>
+					</table>
+				</td>
+			<%
+				if(items[i].pos == columns){
+			%>
+			</tr>
+			<%
+				}	
+			}
+			%>
+			</table>
+		<%
+			}
+			else{
+		%>
+			<div style="clear:left;"></div><div class="w_note">Currently No Items In Webshop</div>
+		<%
+			}
+		%>				
+		<% if(typeof pagination != 'undefined'){ %>
+		<div style="padding:10px;text-align:center;">
+			<table style="width: 100%;"><tr><td><%=pagination %></td></tr></table>
+		</div>	
+		<% }} %>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('a[id^="shop_item_title_"]').on('click', function(e){
+		e.preventDefault();
+		var buy_dialog = $('<div id="item_content" style="margin: 0 auto;"></div>');
+		var item_name = $(this).attr('data-name');
+		var id = $(this).attr('id').split('_')[3];
+		$.ajax({
+			url: DmNConfig.base_url+'shop/get_item_data',
+			data: {id: id},
+			success: function(data){
+				if(data.error){
+					App.notice(App.locale.error, 'error', data.error);
+				}
+				else{				
+					var html = new EJS({url: DmNConfig.base_url+'assets/'+DmNConfig.tmp_dir+'/js_templates/buy_item.ejs'}).render(data);	
+					buy_dialog.dialog({
+						width: 660,
+						height: 'auto',
+						title: "Buy "+item_name,
+						dialogClass: 'fixed',
+						show: {
+							effect: "blind",
+							duration: 500
+						},
+						hide: {
+							effect: "blind",
+							duration: 500
+						},
+						close: function() {
+							$(this).dialog('destroy');
+						}
+					});
+					buy_dialog.html(html);
+					App.initializeModalBoxes();
+				}
+			}
+		});	
+	});	
+});
+</script>
+		
+
+

@@ -7,8 +7,8 @@ ob_start();
 // Author       : neo6 <Salvis87@inbox.lv>
 // ===================================================================================================
 
-$host = isset($_SERVER['HTTP_HOST']) ? htmlspecialchars($_SERVER['HTTP_HOST']) : htmlspecialchars(getenv('HTTP_HOST'));
-$self = isset($_SERVER['PHP_SELF']) ? htmlspecialchars($_SERVER['PHP_SELF']) : htmlspecialchars(getenv('PHP_SELF'));
+$host = isset($_SERVER['HTTP_HOST']) ? htmlspecialchars($_SERVER['HTTP_HOST'], ENT_QUOTES | ENT_HTML5, 'UTF-8') : htmlspecialchars(getenv('HTTP_HOST'), ENT_QUOTES | ENT_HTML5, 'UTF-8');
+$self = isset($_SERVER['PHP_SELF']) ? htmlspecialchars($_SERVER['PHP_SELF'], ENT_QUOTES | ENT_HTML5, 'UTF-8') : htmlspecialchars(getenv('PHP_SELF'), ENT_QUOTES | ENT_HTML5, 'UTF-8');
 
 if (!function_exists('ioncube_loader_iversion')) {
     header('Location: http://' . $host . rtrim(dirname($self), '/\\') . '/setup/ioncube/loader-wizard.php');

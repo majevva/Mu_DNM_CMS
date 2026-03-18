@@ -1,6 +1,35 @@
-Options +FollowSymlinks 
+Options -Indexes +FollowSymlinks
 RewriteEngine On
 ServerSignature Off
+
+# Security Headers
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    Header always unset X-Powered-By
+    Header always unset Server
+</IfModule>
+
+# Block access to sensitive directories and files
+<FilesMatch "\.(env|log|sql|bak|old|orig|dist|lock|json|md|txt|xml|yml|yaml|ini|conf|config)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# SECURITY: Uncomment the block below after completing installation to block setup directory
+# <IfModule mod_rewrite.c>
+#     RewriteCond %{REQUEST_URI} ^/setup/
+#     RewriteRule ^ - [F,L]
+# </IfModule>
+
+# Block access to hidden files and directories
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
 RewriteRule ^news/(.*)/([0-9]+)\/?$ home/read-news/$1/$2 [NC,L]
 RewriteRule ^character/(.*)/(.*)\/?$ info/character/$1/$2 [NC,L]
 RewriteRule ^guild/(.*)/(.*)\/?$ info/guild/$1/$2 [NC,L]

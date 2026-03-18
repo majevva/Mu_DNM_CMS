@@ -354,15 +354,13 @@ class gettext_reader {
       throw new InvalidArgumentException(
         "Select_string only accepts integers: " . $n);
     }
-    $string = $this->get_plural_forms();
-    $string = str_replace('nplurals',"\$total",$string);
-    $string = str_replace("n",$n,$string);
-    $string = str_replace('plural',"\$plural",$string);
-
-    $total = 0;
-    $plural = 0;
-
-    eval("$string");
+    if (!isset($this->_plural_func)) {
+      $string = $this->get_plural_forms();
+      $string = str_replace('nplurals', '$total', $string);
+      $string = str_replace('plural', '$plural', $string);
+      $this->_plural_func = eval('return function($n) { $total = 0; $plural = 0; ' . $string . ' return array($total, $plural); };');
+    }
+    list($total, $plural) = call_user_func($this->_plural_func, $n);
     if ($plural >= $total) $plural = $total - 1;
     return $plural;
   }

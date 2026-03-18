@@ -35,7 +35,7 @@
                                 style="color:red;">*</span></label>
                         <div class="controls">
                             <input type="text" class="input-xlarge" name="name" id="name"
-                                   value="<?php if (isset($_POST['name'])): echo $_POST['name']; endif; ?>" required />
+                                   value="<?php if (isset($_POST['name'])): echo htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8'); endif; ?>" required />
                         </div>
                     </div>
                     <div class="control-group">
@@ -58,7 +58,7 @@
                                 style="color:red;">*</span></label>
                         <div class="controls">
                             <input type="text" class="input-xlarge" data-role="tagsinput" name="time" id="time"
-                                   value="<?php if (isset($_POST['time'])): echo $_POST['time']; endif; ?>" />
+                                   value="<?php if (isset($_POST['time'])): echo htmlspecialchars($_POST['time'], ENT_QUOTES, 'UTF-8'); endif; ?>" />
                             <p class="help-block">Event times seperated by comma. Format: hh:mm or hh:mm:ss</p>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                                 style="color:red;">*</span></label>
                         <div class="controls">
                             <input type="text" class="input-xlarge" data-role="tagsinput" name="time_monday" id="time_monday"
-                                   value="<?php if (isset($_POST['time_monday'])): echo $_POST['time_monday']; endif; ?>" />
+                                   value="<?php if (isset($_POST['time_monday'])): echo htmlspecialchars($_POST['time_monday'], ENT_QUOTES, 'UTF-8'); endif; ?>" />
                             <p class="help-block">Event times seperated by comma. Format: hh:mm or hh:mm:ss</p>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                                 style="color:red;">*</span></label>
                         <div class="controls">
                             <input type="text" class="input-xlarge" data-role="tagsinput" name="time_tuesday" id="time_tuesday"
-                                   value="<?php if (isset($_POST['time_tuesday'])): echo $_POST['time_tuesday']; endif; ?>" />
+                                   value="<?php if (isset($_POST['time_tuesday'])): echo htmlspecialchars($_POST['time_tuesday'], ENT_QUOTES, 'UTF-8'); endif; ?>" />
                             <p class="help-block">Event times seperated by comma. Format: hh:mm or hh:mm:ss</p>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                                 style="color:red;">*</span></label>
                         <div class="controls">
                             <input type="text" class="input-xlarge" data-role="tagsinput" name="time_wednesday" id="time_wednesday"
-                                   value="<?php if (isset($_POST['time_wednesday'])): echo $_POST['time_wednesday']; endif; ?>" />
+                                   value="<?php if (isset($_POST['time_wednesday'])): echo htmlspecialchars($_POST['time_wednesday'], ENT_QUOTES, 'UTF-8'); endif; ?>" />
                             <p class="help-block">Event times seperated by comma. Format: hh:mm or hh:mm:ss</p>
                         </div>
                     </div>
@@ -94,7 +94,7 @@
                                 style="color:red;">*</span></label>
                         <div class="controls">
                             <input type="text" class="input-xlarge" data-role="tagsinput" name="time_thursday" id="time_thursday"
-                                   value="<?php if (isset($_POST['time_thursday'])): echo $_POST['time_thursday']; endif; ?>" />
+                                   value="<?php if (isset($_POST['time_thursday'])): echo htmlspecialchars($_POST['time_thursday'], ENT_QUOTES, 'UTF-8'); endif; ?>" />
                             <p class="help-block">Event times seperated by comma. Format: hh:mm or hh:mm:ss</p>
                         </div>
                     </div>
@@ -103,7 +103,7 @@
                                 style="color:red;">*</span></label>
                         <div class="controls">
                             <input type="text" class="input-xlarge" data-role="tagsinput" name="time_friday" id="time_friday"
-                                   value="<?php if (isset($_POST['time_friday'])): echo $_POST['time_friday']; endif; ?>" />
+                                   value="<?php if (isset($_POST['time_friday'])): echo htmlspecialchars($_POST['time_friday'], ENT_QUOTES, 'UTF-8'); endif; ?>" />
                             <p class="help-block">Event times seperated by comma. Format: hh:mm or hh:mm:ss</p>
                         </div>
                     </div>
@@ -112,7 +112,7 @@
                                 style="color:red;">*</span></label>
                         <div class="controls">
                             <input type="text" class="input-xlarge" data-role="tagsinput" name="time_saturday" id="time_saturday"
-                                   value="<?php if (isset($_POST['time_saturday'])): echo $_POST['time_saturday']; endif; ?>" />
+                                   value="<?php if (isset($_POST['time_saturday'])): echo htmlspecialchars($_POST['time_saturday'], ENT_QUOTES, 'UTF-8'); endif; ?>" />
                             <p class="help-block">Event times seperated by comma. Format: hh:mm or hh:mm:ss</p>
                         </div>
                     </div>
@@ -121,7 +121,7 @@
                                 style="color:red;">*</span></label>
                         <div class="controls">
                             <input type="text" class="input-xlarge" data-role="tagsinput" name="time_sunday" id="time_sunday"
-                                   value="<?php if (isset($_POST['time_sunday'])): echo $_POST['time_sunday']; endif; ?>" />
+                                   value="<?php if (isset($_POST['time_sunday'])): echo htmlspecialchars($_POST['time_sunday'], ENT_QUOTES, 'UTF-8'); endif; ?>" />
                             <p class="help-block">Event times seperated by comma. Format: hh:mm or hh:mm:ss</p>
                         </div>
                     </div>

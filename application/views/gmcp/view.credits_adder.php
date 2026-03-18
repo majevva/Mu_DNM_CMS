@@ -32,7 +32,7 @@
                             <div class="controls">
                                 <input type="text" class="typeahead" id="name" name="name"
                                        value="<?php if (isset($_POST['name'])) {
-                                           echo $_POST['name'];
+                                           echo htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8');
                                        } ?>"/>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                             <div class="controls">
                                 <input type="text" class="typeahead" id="amount" name="amount"
                                        value="<?php if (isset($_POST['amount'])) {
-                                           echo $_POST['amount'];
+                                           echo htmlspecialchars($_POST['amount'], ENT_QUOTES, 'UTF-8');
                                        } ?>"/>
                             </div>
                         </div>

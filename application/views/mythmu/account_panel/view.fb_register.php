@@ -26,7 +26,7 @@
                                 <td style="width: 150px;"><?php echo _('Username'); ?>:</td>
                                 <td>
                                     <input type="text" name="user" id="user" value="<?php if(isset($_POST['user'])){
-                                        echo $_POST['user'];
+                                        echo htmlspecialchars($_POST['user'], ENT_QUOTES, 'UTF-8');
                                     } ?>"/>
                                 </td>
                             </tr>

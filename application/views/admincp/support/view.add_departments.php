@@ -29,7 +29,7 @@
                             <div class="controls">
                                 <input type="text" class="typeahead" id="title" name="title"
                                        value="<?php if (isset($_POST['title'])) {
-                                           echo $_POST['title'];
+                                           echo htmlspecialchars($_POST['title'], ENT_QUOTES, 'UTF-8');
                                        } ?>"/>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                             <div class="controls">
                                 <input type="text" class="typeahead" id="pay_per_incident" name="pay_per_incident"
                                        value="<?php if (isset($_POST['pay_per_incident'])) {
-                                           echo $_POST['pay_per_incident'];
+                                           echo htmlspecialchars($_POST['pay_per_incident'], ENT_QUOTES, 'UTF-8');
                                        } else {
                                            echo 0;
                                        } ?>"/>

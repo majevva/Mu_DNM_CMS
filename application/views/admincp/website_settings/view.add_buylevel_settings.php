@@ -48,7 +48,7 @@
                                 <div class="controls">
                                     <input type="text" class="span3 typeahead" id="level" name="level"
                                            value="<?php if (isset($_POST['level'])) {
-                                               echo $_POST['level'];
+                                               echo htmlspecialchars($_POST['level'], ENT_QUOTES, 'UTF-8');
                                            } ?>" placeholder="400"/>
                                 </div>
                             </div>
@@ -57,7 +57,7 @@
                                 <div class="controls">
                                     <input type="text" class="span3 typeahead" id="price" name="price"
                                            value="<?php if (isset($_POST['price'])) {
-                                               echo $_POST['price'];
+                                               echo htmlspecialchars($_POST['price'], ENT_QUOTES, 'UTF-8');
                                            } ?>" placeholder="9999"/>
                                 </div>
                             </div>

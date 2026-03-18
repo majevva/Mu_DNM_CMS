@@ -29,7 +29,7 @@
                                 style="color:red;">*</span></label>
                         <div class="controls">
                             <input type="text" class="input-xlarge" name="package_title" id="package_title"
-                                   value="<?php if (isset($_POST['package_title'])): echo $_POST['package_title']; endif; ?>" required />
+                                   value="<?php if (isset($_POST['package_title'])): echo htmlspecialchars($_POST['package_title'], ENT_QUOTES, 'UTF-8'); endif; ?>" required />
                         </div>
                     </div>
                     <div class="control-group">
@@ -37,7 +37,7 @@
                                 style="color:red;">*</span></label>
                         <div class="controls">
                             <input type="text" class="input-xlarge" name="price" id="price"
-                                   value="<?php if (isset($_POST['price'])): echo $_POST['price']; endif; ?>" pattern="\d*" required title="Allowed only numbers" />
+                                   value="<?php if (isset($_POST['price'])): echo htmlspecialchars($_POST['price'], ENT_QUOTES, 'UTF-8'); endif; ?>" pattern="\d*" required title="Allowed only numbers" />
                         </div>
                     </div>
                     <div class="control-group">
@@ -88,7 +88,7 @@
                         <label class="control-label" for="reset_price_decrease">Reset Zen Decrease </label>
                         <div class="controls">
                             <input type="text" class="input-xlarge" name="reset_price_decrease" id="reset_price_decrease"
-                                   value="<?php if (isset($_POST['reset_price_decrease'])): echo $_POST['reset_price_decrease']; endif; ?>" placeholder="0" pattern="\d*" title="Allowed only numbers"/>
+                                   value="<?php if (isset($_POST['reset_price_decrease'])): echo htmlspecialchars($_POST['reset_price_decrease'], ENT_QUOTES, 'UTF-8'); endif; ?>" placeholder="0" pattern="\d*" title="Allowed only numbers"/>
                             <p class="help-block">Formula: req reset zen - vip reset zen decrease</p>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                         <label class="control-label" for="reset_level_decrease">Reset Level Decrease </label>
                         <div class="controls">
                             <input type="text" class="input-xlarge" name="reset_level_decrease" id="reset_level_decrease"
-                                   value="<?php if (isset($_POST['reset_level_decrease'])): echo $_POST['reset_level_decrease']; endif; ?>" placeholder="0" pattern="\d*" title="Allowed only numbers"/>
+                                   value="<?php if (isset($_POST['reset_level_decrease'])): echo htmlspecialchars($_POST['reset_level_decrease'], ENT_QUOTES, 'UTF-8'); endif; ?>" placeholder="0" pattern="\d*" title="Allowed only numbers"/>
                             <p class="help-block">Formula: req reset lvl - vip reset level decrease</p>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
                         <label class="control-label" for="grand_reset_bonus_credits">Grand Reset Bonus Credits </label>
                         <div class="controls">
                             <input type="text" class="input-xlarge" name="grand_reset_bonus_credits" id="grand_reset_bonus_credits"
-                                   value="<?php if (isset($_POST['grand_reset_bonus_credits'])): echo $_POST['grand_reset_bonus_credits']; endif; ?>" placeholder="0" pattern="\d*" title="Allowed only numbers"/>
+                                   value="<?php if (isset($_POST['grand_reset_bonus_credits'])): echo htmlspecialchars($_POST['grand_reset_bonus_credits'], ENT_QUOTES, 'UTF-8'); endif; ?>" placeholder="0" pattern="\d*" title="Allowed only numbers"/>
                             <p class="help-block">Formula: grand reset bonus credits + vip bonus credits</p>
                         </div>
                     </div>
@@ -145,7 +145,7 @@
                         <label class="control-label" for="pk_clear_discount">PK Clear Zen Decrease </label>
                         <div class="controls">
                             <input type="text" class="input-xlarge" name="pk_clear_discount" id="pk_clear_discount"
-                                   value="<?php if (isset($_POST['pk_clear_discount'])): echo $_POST['pk_clear_discount']; endif; ?>" placeholder="0" pattern="\d*" title="Allowed only numbers"/>
+                                   value="<?php if (isset($_POST['pk_clear_discount'])): echo htmlspecialchars($_POST['pk_clear_discount'], ENT_QUOTES, 'UTF-8'); endif; ?>" placeholder="0" pattern="\d*" title="Allowed only numbers"/>
                             <p class="help-block">Formula: pk clear price - vip pk clear zen decrease</p>
                         </div>
                     </div>
@@ -164,7 +164,7 @@
                         <label class="control-label" for="online_hour_exchange_bonus">Online hour exchange bonus </label>
                         <div class="controls">
                             <input type="text" class="input-xlarge" name="online_hour_exchange_bonus" id="online_hour_exchange_bonus"
-                                   value="<?php if (isset($_POST['online_hour_exchange_bonus'])): echo $_POST['online_hour_exchange_bonus']; endif; ?>" placeholder="0" pattern="\d*" title="Allowed only numbers"/>
+                                   value="<?php if (isset($_POST['online_hour_exchange_bonus'])): echo htmlspecialchars($_POST['online_hour_exchange_bonus'], ENT_QUOTES, 'UTF-8'); endif; ?>" placeholder="0" pattern="\d*" title="Allowed only numbers"/>
                             <p class="help-block">Formula: online hour reward + online hour exchange bonus</p>
                         </div>
                     </div>
@@ -194,7 +194,7 @@
                         <label class="control-label" for="connect_member_load">Connect Member Load</label>
                         <div class="controls">
                             <input type="text" class="input-xlarge" name="connect_member_load" id="connect_member_load"
-                                   value="<?php if (isset($_POST['connect_member_load'])): echo $_POST['connect_member_load']; endif; ?>" />
+                                   value="<?php if (isset($_POST['connect_member_load'])): echo htmlspecialchars($_POST['connect_member_load'], ENT_QUOTES, 'UTF-8'); endif; ?>" />
                             <p class="help-block">Add account into connectmember.txt or IGC_ConnectMember.xml</p>
                             <p class="help-block">Example: C:/muserver/data/connectmember.txt</p>
                             <p class="help-block">This option works only if website is hosted on same server </p>
@@ -226,7 +226,7 @@
                     <div class="control-group">
                         <label class="control-label" for="server_bonus_info">Server Vip Info </label>
                         <div class="controls">
-                            <textarea class="cleditor" id="server_bonus_info" name="server_bonus_info" rows="8"><?php if (isset($_POST['server_bonus_info'])): echo $_POST['server_bonus_info']; endif; ?></textarea>
+                            <textarea class="cleditor" id="server_bonus_info" name="server_bonus_info" rows="8"><?php if (isset($_POST['server_bonus_info'])): echo htmlspecialchars($_POST['server_bonus_info'], ENT_QUOTES, 'UTF-8'); endif; ?></textarea>
                             <p class="help-block">Additional bonus info for server vip package</p>
                         </div>
                     </div>

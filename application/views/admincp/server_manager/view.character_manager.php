@@ -33,7 +33,7 @@
 
                             <div class="controls">
                                 <input type="text" class="input-xlarge" name="character" id="character"
-                                       value="<?php if (isset($_POST['character'])): echo $_POST['character']; endif; ?>"/>
+                                       value="<?php if (isset($_POST['character'])): echo htmlspecialchars($_POST['character'], ENT_QUOTES, 'UTF-8'); endif; ?>"/>
                             </div>
                         </div>
                         <div class="control-group">

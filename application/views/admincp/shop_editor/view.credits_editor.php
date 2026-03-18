@@ -88,11 +88,11 @@
 
                             <div class="controls">
                                 <select id="act" name="act">
-                                    <option value="1" <?php if (isset($_POST['act']) && $_POST['c_type'] == 1) {
+                                    <option value="1" <?php if (isset($_POST['act']) && $_POST['act'] == 1) {
                                         echo 'selected="selected"';
                                     } ?>>Add
                                     </option>
-                                    <option value="2" <?php if (isset($_POST['act']) && $_POST['c_type'] == 2) {
+                                    <option value="2" <?php if (isset($_POST['act']) && $_POST['act'] == 2) {
                                         echo 'selected="selected"';
                                     } ?>>Remove
                                     </option>
@@ -105,7 +105,7 @@
                             <div class="controls">
                                 <input type="text" class="typeahead" id="amount" name="amount"
                                        value="<?php if (isset($_POST['amount'])) {
-                                           echo $_POST['amount'];
+                                           echo htmlspecialchars($_POST['amount'], ENT_QUOTES, 'UTF-8');
                                        } ?>"/>
                             </div>
                         </div>

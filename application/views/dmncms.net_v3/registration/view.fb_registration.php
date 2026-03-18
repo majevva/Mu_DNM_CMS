@@ -24,7 +24,7 @@ $this->load->view($this->config->config_entry('main|template') . DS . 'view.head
                         <table>
                             <tr>
                                 <td style="width: 150px;"><?php echo _('Username'); ?>:</td>
-                                <td><input class="validate[required,minSize[<?php echo $config['min_username'];?>],maxSize[<?php echo $config['max_username'];?>]]" type="text" name="user" id="user" value="<?php if (isset($_POST['user'])) {echo $_POST['user'];} ?>"/></td>
+                                <td><input class="validate[required,minSize[<?php echo $config['min_username'];?>],maxSize[<?php echo $config['max_username'];?>]]" type="text" name="user" id="user" value="<?php if (isset($_POST['user'])) {echo htmlspecialchars($_POST['user'], ENT_QUOTES, 'UTF-8');} ?>"/></td>
                             </tr>
 							<?php if($config['req_secret'] == 1):?>
 							<tr>

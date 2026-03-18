@@ -32,7 +32,7 @@
 
                             <div class="controls">
                                 <input type="text" class="input-xlarge" name="key" id="key"
-                                       value="<?php if (isset($_POST['key'])): echo $_POST['key']; endif; ?>"/>
+                                       value="<?php if (isset($_POST['key'])): echo htmlspecialchars($_POST['key'], ENT_QUOTES, 'UTF-8'); endif; ?>"/>
 
                                 <p>Should be unique for each server, after adding this key can not be changed
                                     anymore</p>
@@ -44,7 +44,7 @@
 
                             <div class="controls">
                                 <input type="text" class="input-xlarge" name="title" id="title"
-                                       value="<?php if (isset($_POST['title'])): echo $_POST['title']; endif; ?>"/>
+                                       value="<?php if (isset($_POST['title'])): echo htmlspecialchars($_POST['title'], ENT_QUOTES, 'UTF-8'); endif; ?>"/>
                             </div>
                         </div>
                         <div class="control-group">
@@ -91,7 +91,7 @@
 
                             <div class="controls">
                                 <input type="text" class="input-xlarge" name="gs_ip" id="gs_ip"
-                                       value="<?php if (isset($_POST['gs_ip'])): echo $_POST['gs_ip']; endif; ?>"/>
+                                       value="<?php if (isset($_POST['gs_ip'])): echo htmlspecialchars($_POST['gs_ip'], ENT_QUOTES, 'UTF-8'); endif; ?>"/>
                             </div>
                         </div>
                         <div class="control-group">
@@ -99,7 +99,7 @@
 
                             <div class="controls">
                                 <input type="text" class="input-xlarge" name="gs_port" id="gs_port"
-                                       value="<?php if (isset($_POST['gs_port'])): echo $_POST['gs_port']; endif; ?>"/>
+                                       value="<?php if (isset($_POST['gs_port'])): echo htmlspecialchars($_POST['gs_port'], ENT_QUOTES, 'UTF-8'); endif; ?>"/>
                             </div>
                         </div>
                         <div class="control-group">
@@ -107,7 +107,7 @@
 
                             <div class="controls">
                                 <input type="text" class="input-xlarge" data-role="tagsinput" name="gs_names" id="gs_names"
-                                       value="<?php if (isset($_POST['gs_names'])): echo $_POST['gs_names']; endif; ?>"/>
+                                       value="<?php if (isset($_POST['gs_names'])): echo htmlspecialchars($_POST['gs_names'], ENT_QUOTES, 'UTF-8'); endif; ?>"/>
 
                                 <p>Can be located in ServerInfo.dat or GameServer.ini</p>
                             </div>
@@ -117,7 +117,7 @@
 
                             <div class="controls">
                                 <input type="text" class="input-xlarge" name="max_players" id="max_players"
-                                       value="<?php if (isset($_POST['max_players'])): echo $_POST['max_players']; endif; ?>"/>
+                                       value="<?php if (isset($_POST['max_players'])): echo htmlspecialchars($_POST['max_players'], ENT_QUOTES, 'UTF-8'); endif; ?>"/>
                             </div>
                         </div>
                         <div class="control-group">
@@ -125,7 +125,7 @@
 
                             <div class="controls">
                                 <input type="text" class="input-xlarge" name="version" id="version"
-                                       value="<?php if (isset($_POST['version'])): echo $_POST['version']; endif; ?>"/>
+                                       value="<?php if (isset($_POST['version'])): echo htmlspecialchars($_POST['version'], ENT_QUOTES, 'UTF-8'); endif; ?>"/>
                             </div>
                         </div>
                         <div class="control-group">
@@ -133,7 +133,7 @@
 
                             <div class="controls">
                                 <input type="text" class="input-xlarge" name="exp" id="exp"
-                                       value="<?php if (isset($_POST['exp'])): echo $_POST['exp']; endif; ?>"/>
+                                       value="<?php if (isset($_POST['exp'])): echo htmlspecialchars($_POST['exp'], ENT_QUOTES, 'UTF-8'); endif; ?>"/>
                             </div>
                         </div>
                         <div class="control-group">
@@ -141,7 +141,7 @@
 
                             <div class="controls">
                                 <input type="text" class="input-xlarge" name="drop" id="drop"
-                                       value="<?php if (isset($_POST['drop'])): echo $_POST['drop']; endif; ?>"/>
+                                       value="<?php if (isset($_POST['drop'])): echo htmlspecialchars($_POST['drop'], ENT_QUOTES, 'UTF-8'); endif; ?>"/>
                             </div>
                         </div>
                         <div class="form-actions">

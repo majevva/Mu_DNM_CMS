@@ -37,7 +37,7 @@
 				<tr>
 					<td><?php echo _('Email'); ?>:</td>
 					<td>
-						<input class="validate[required,custom[email],maxSize[50]]" type="text" name="email" id="email" value="<?php echo isset($_GET['email']) ? $_GET['email'] : ''; ?>"/>
+						<input class="validate[required,custom[email],maxSize[50]]" type="text" name="email" id="email" value="<?php echo isset($_GET['email']) ? htmlspecialchars($_GET['email'], ENT_QUOTES, 'UTF-8') : ''; ?>"/>
 					</td>
 				</tr>
 				<?php endif;?>

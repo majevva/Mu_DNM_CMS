@@ -47,7 +47,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="sreset" name="sreset"
                                        value="<?php if (isset($_POST['sreset'])) {
-                                           echo $_POST['sreset'];
+                                           echo htmlspecialchars($_POST['sreset'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="ereset" name="ereset"
                                        value="<?php if (isset($_POST['ereset'])) {
-                                           echo $_POST['ereset'];
+                                           echo htmlspecialchars($_POST['ereset'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="9999"/>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="money" name="money"
                                        value="<?php if (isset($_POST['money'])) {
-                                           echo $_POST['money'];
+                                           echo htmlspecialchars($_POST['money'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="9999"/>
                             </div>
                         </div>
@@ -93,7 +93,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="level" name="level"
                                        value="<?php if (isset($_POST['level'])) {
-                                           echo $_POST['level'];
+                                           echo htmlspecialchars($_POST['level'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="400"/>
                             </div>
                         </div>
@@ -102,7 +102,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="reset" name="reset"
                                        value="<?php if (isset($_POST['reset'])) {
-                                           echo $_POST['reset'];
+                                           echo htmlspecialchars($_POST['reset'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="100"/>
                             </div>
                         </div>
@@ -176,7 +176,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="new_stat_points" name="new_stat_points"
                                        value="<?php if (isset($_POST['new_stat_points'])) {
-                                           echo $_POST['new_stat_points'];
+                                           echo htmlspecialchars($_POST['new_stat_points'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
 
                                 <p>Every stat changed to this value if Clear Stats is activated</p>
@@ -204,7 +204,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="new_free_points" name="new_free_points"
                                        value="<?php if (isset($_POST['new_free_points'])) {
-                                           echo $_POST['new_free_points'];
+                                           echo htmlspecialchars($_POST['new_free_points'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
 
                                 <p>LevelUpPoints changed to this value if Clear LevelUp Points is activated</p>
@@ -217,7 +217,7 @@
                                 <div class="input-append">
                                     <input type="text" size="16" id="bonus_lvl_up_dw" name="bonus_lvl_up_dw"
                                            value="<?php if (isset($_POST['bonus_lvl_up_dw'])) {
-                                               echo $_POST['bonus_lvl_up_dw'];
+                                               echo htmlspecialchars($_POST['bonus_lvl_up_dw'], ENT_QUOTES, 'UTF-8');
                                            } ?>" placeholder="0"/>
                                     <button class="btn" type="button" id="apply_to_all_classes">Apply To All Classes
                                     </button>
@@ -231,7 +231,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="bonus_lvl_up_sm" name="bonus_lvl_up_sm"
                                        value="<?php if (isset($_POST['bonus_lvl_up_sm'])) {
-                                           echo $_POST['bonus_lvl_up_sm'];
+                                           echo htmlspecialchars($_POST['bonus_lvl_up_sm'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
 
                                 <p>Bonus LevelUp Points after reset character this value is multiplied by resets</p>
@@ -243,7 +243,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="bonus_lvl_up_gm" name="bonus_lvl_up_gm"
                                        value="<?php if (isset($_POST['bonus_lvl_up_gm'])) {
-                                           echo $_POST['bonus_lvl_up_gm'];
+                                           echo htmlspecialchars($_POST['bonus_lvl_up_gm'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
 
                                 <p>Bonus LevelUp Points after reset character this value is multiplied by resets</p>
@@ -255,7 +255,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="bonus_lvl_up_dk" name="bonus_lvl_up_dk"
                                        value="<?php if (isset($_POST['bonus_lvl_up_dk'])) {
-                                           echo $_POST['bonus_lvl_up_dk'];
+                                           echo htmlspecialchars($_POST['bonus_lvl_up_dk'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
 
                                 <p>Bonus LevelUp Points after reset character this value is multiplied by resets</p>
@@ -267,7 +267,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="bonus_lvl_up_bk" name="bonus_lvl_up_bk"
                                        value="<?php if (isset($_POST['bonus_lvl_up_bk'])) {
-                                           echo $_POST['bonus_lvl_up_bk'];
+                                           echo htmlspecialchars($_POST['bonus_lvl_up_bk'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
 
                                 <p>Bonus LevelUp Points after reset character this value is multiplied by resets</p>
@@ -279,7 +279,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="bonus_lvl_up_bm" name="bonus_lvl_up_bm"
                                        value="<?php if (isset($_POST['bonus_lvl_up_bm'])) {
-                                           echo $_POST['bonus_lvl_up_bm'];
+                                           echo htmlspecialchars($_POST['bonus_lvl_up_bm'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
 
                                 <p>Bonus LevelUp Points after reset character this value is multiplied by resets</p>
@@ -291,7 +291,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="bonus_lvl_up_fe" name="bonus_lvl_up_fe"
                                        value="<?php if (isset($_POST['bonus_lvl_up_fe'])) {
-                                           echo $_POST['bonus_lvl_up_fe'];
+                                           echo htmlspecialchars($_POST['bonus_lvl_up_fe'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
 
                                 <p>Bonus LevelUp Points after reset character this value is multiplied by resets</p>
@@ -303,7 +303,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="bonus_lvl_up_me" name="bonus_lvl_up_me"
                                        value="<?php if (isset($_POST['bonus_lvl_up_me'])) {
-                                           echo $_POST['bonus_lvl_up_me'];
+                                           echo htmlspecialchars($_POST['bonus_lvl_up_me'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
 
                                 <p>Bonus LevelUp Points after reset character this value is multiplied by resets</p>
@@ -315,7 +315,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="bonus_lvl_up_he" name="bonus_lvl_up_he"
                                        value="<?php if (isset($_POST['bonus_lvl_up_he'])) {
-                                           echo $_POST['bonus_lvl_up_he'];
+                                           echo htmlspecialchars($_POST['bonus_lvl_up_he'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
 
                                 <p>Bonus LevelUp Points after reset character this value is multiplied by resets</p>
@@ -327,7 +327,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="bonus_lvl_up_mg" name="bonus_lvl_up_mg"
                                        value="<?php if (isset($_POST['bonus_lvl_up_mg'])) {
-                                           echo $_POST['bonus_lvl_up_mg'];
+                                           echo htmlspecialchars($_POST['bonus_lvl_up_mg'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
 
                                 <p>Bonus LevelUp Points after reset character this value is multiplied by resets</p>
@@ -339,7 +339,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="bonus_lvl_up_dm" name="bonus_lvl_up_dm"
                                        value="<?php if (isset($_POST['bonus_lvl_up_dm'])) {
-                                           echo $_POST['bonus_lvl_up_dm'];
+                                           echo htmlspecialchars($_POST['bonus_lvl_up_dm'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
 
                                 <p>Bonus LevelUp Points after reset character this value is multiplied by resets</p>
@@ -351,7 +351,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="bonus_lvl_up_dl" name="bonus_lvl_up_dl"
                                        value="<?php if (isset($_POST['bonus_lvl_up_dl'])) {
-                                           echo $_POST['bonus_lvl_up_dl'];
+                                           echo htmlspecialchars($_POST['bonus_lvl_up_dl'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
 
                                 <p>Bonus LevelUp Points after reset character this value is multiplied by resets</p>
@@ -363,7 +363,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="bonus_lvl_up_le" name="bonus_lvl_up_le"
                                        value="<?php if (isset($_POST['bonus_lvl_up_le'])) {
-                                           echo $_POST['bonus_lvl_up_le'];
+                                           echo htmlspecialchars($_POST['bonus_lvl_up_le'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
 
                                 <p>Bonus LevelUp Points after reset character this value is multiplied by resets</p>
@@ -375,7 +375,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="bonus_lvl_up_su" name="bonus_lvl_up_su"
                                        value="<?php if (isset($_POST['bonus_lvl_up_su'])) {
-                                           echo $_POST['bonus_lvl_up_su'];
+                                           echo htmlspecialchars($_POST['bonus_lvl_up_su'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
 
                                 <p>Bonus LevelUp Points after reset character this value is multiplied by resets</p>
@@ -387,7 +387,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="bonus_lvl_up_bs" name="bonus_lvl_up_bs"
                                        value="<?php if (isset($_POST['bonus_lvl_up_bs'])) {
-                                           echo $_POST['bonus_lvl_up_bs'];
+                                           echo htmlspecialchars($_POST['bonus_lvl_up_bs'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
 
                                 <p>Bonus LevelUp Points after reset character this value is multiplied by resets</p>
@@ -399,7 +399,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="bonus_lvl_up_dim" name="bonus_lvl_up_dim"
                                        value="<?php if (isset($_POST['bonus_lvl_up_dim'])) {
-                                           echo $_POST['bonus_lvl_up_dim'];
+                                           echo htmlspecialchars($_POST['bonus_lvl_up_dim'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
 
                                 <p>Bonus LevelUp Points after reset character this value is multiplied by resets</p>
@@ -411,7 +411,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="bonus_lvl_up_rf" name="bonus_lvl_up_rf"
                                        value="<?php if (isset($_POST['bonus_lvl_up_rf'])) {
-                                           echo $_POST['bonus_lvl_up_rf'];
+                                           echo htmlspecialchars($_POST['bonus_lvl_up_rf'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
 
                                 <p>Bonus LevelUp Points after reset character this value is multiplied by resets</p>
@@ -423,7 +423,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="bonus_lvl_up_fm" name="bonus_lvl_up_fm"
                                        value="<?php if (isset($_POST['bonus_lvl_up_fm'])) {
-                                           echo $_POST['bonus_lvl_up_fm'];
+                                           echo htmlspecialchars($_POST['bonus_lvl_up_fm'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
 
                                 <p>Bonus LevelUp Points after reset character this value is multiplied by resets</p>
@@ -434,7 +434,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="bonus_lvl_up_gl" name="bonus_lvl_up_gl"
                                        value="<?php if (isset($_POST['bonus_lvl_up_gl'])) {
-                                           echo $_POST['bonus_lvl_up_gl'];
+                                           echo htmlspecialchars($_POST['bonus_lvl_up_gl'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
 
                                 <p>Bonus LevelUp Points after reset character this value is multiplied by resets</p>
@@ -445,7 +445,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="bonus_lvl_up_ml" name="bonus_lvl_up_ml"
                                        value="<?php if (isset($_POST['bonus_lvl_up_ml'])) {
-                                           echo $_POST['bonus_lvl_up_ml'];
+                                           echo htmlspecialchars($_POST['bonus_lvl_up_ml'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
 
                                 <p>Bonus LevelUp Points after reset character this value is multiplied by resets</p>
@@ -493,7 +493,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="bonus_credits" name="bonus_credits"
                                        value="<?php if (isset($_POST['bonus_credits'])) {
-                                           echo $_POST['bonus_credits'];
+                                           echo htmlspecialchars($_POST['bonus_credits'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
                             </div>
                         </div>
@@ -503,7 +503,7 @@
                             <div class="controls">
                                 <input type="text" class="span3 typeahead" id="bonus_gcredits" name="bonus_gcredits"
                                        value="<?php if (isset($_POST['bonus_gcredits'])) {
-                                           echo $_POST['bonus_gcredits'];
+                                           echo htmlspecialchars($_POST['bonus_gcredits'], ENT_QUOTES, 'UTF-8');
                                        } ?>" placeholder="0"/>
                             </div>
                         </div>

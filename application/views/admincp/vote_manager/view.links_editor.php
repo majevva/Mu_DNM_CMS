@@ -37,7 +37,7 @@
 
                             <div class="controls">
                                 <input type="text" class="input-xlarge" name="votelink" id="votelink"
-                                       value="<?php if (isset($_POST['votelink'])): echo $_POST['votelink']; endif; ?>"/>
+                                       value="<?php if (isset($_POST['votelink'])): echo htmlspecialchars($_POST['votelink'], ENT_QUOTES, 'UTF-8'); endif; ?>"/>
                             </div>
                         </div>
                         <div class="control-group">
@@ -46,7 +46,7 @@
 
                             <div class="controls">
                                 <input type="text" class="input-xlarge" id="name" name="name"
-                                       value="<?php if (isset($_POST['name'])): echo $_POST['name']; endif; ?>"/>
+                                       value="<?php if (isset($_POST['name'])): echo htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8'); endif; ?>"/>
                             </div>
                         </div>
                         <div class="control-group">
@@ -55,7 +55,7 @@
 
                             <div class="controls">
                                 <input type="text" class="input-xlarge" id="img_url" name="img_url"
-                                       value="<?php if (isset($_POST['img_url'])): echo $_POST['img_url']; endif; ?>"/>
+                                       value="<?php if (isset($_POST['img_url'])): echo htmlspecialchars($_POST['img_url'], ENT_QUOTES, 'UTF-8'); endif; ?>"/>
                             </div>
                         </div>
                         <div class="control-group">
@@ -78,7 +78,7 @@
 
                             <div class="controls">
                                 <input type="text" class="input-xlarge" id="reward" name="reward"
-                                       value="<?php if (isset($_POST['reward'])): echo $_POST['reward']; endif; ?>"/>
+                                       value="<?php if (isset($_POST['reward'])): echo htmlspecialchars($_POST['reward'], ENT_QUOTES, 'UTF-8'); endif; ?>"/>
                             </div>
                         </div>
                         <div class="control-group">
@@ -133,7 +133,7 @@
 
                                 <div class="controls">
                                     <input type="text" class="input-xlarge" id="mmotop_stats_url" name="mmotop_stats_url"
-                                           value="<?php if (isset($_POST['mmotop_stats_url'])): echo $_POST['mmotop_stats_url']; endif; ?>"/>
+                                           value="<?php if (isset($_POST['mmotop_stats_url'])): echo htmlspecialchars($_POST['mmotop_stats_url'], ENT_QUOTES, 'UTF-8'); endif; ?>"/>
                                 </div>
                             </div>
                             <div class="control-group">
@@ -141,7 +141,7 @@
 
                                 <div class="controls">
                                     <input type="text" class="input-xlarge" id="mmotop_reward_sms" name="mmotop_reward_sms"
-                                           value="<?php if (isset($_POST['mmotop_reward_sms'])): echo $_POST['mmotop_reward_sms']; endif; ?>"/>
+                                           value="<?php if (isset($_POST['mmotop_reward_sms'])): echo htmlspecialchars($_POST['mmotop_reward_sms'], ENT_QUOTES, 'UTF-8'); endif; ?>"/>
                                 </div>
                             </div>
                         </div>

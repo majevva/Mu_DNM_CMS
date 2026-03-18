@@ -31,6 +31,7 @@
                 </div>
                 <div class="box-content">
                     <form class="form-horizontal" method="POST" action="">
+                        <?php $this->csrf->writeToken(); ?>
                         <fieldset>
                             <legend>Ban Character Or Account</legend>
                             <div class="control-group">
@@ -38,7 +39,7 @@
 
                                 <div class="controls">
                                     <input type="text" class="span6 typeahead" id="name" name="name"
-                                           value="<?php echo $name; ?>"/>
+                                           value="<?php echo htmlspecialchars($name, ENT_QUOTES, 'UTF-8'); ?>"/>
 
                                     <p class="help-block">Enter character or account name.</p>
                                 </div>
@@ -116,16 +117,20 @@
 						  </thead>   
 						  <tbody>';
                     foreach ($ban_list as $key => $value) {
+                        $safe_name = htmlspecialchars($value['name'], ENT_QUOTES, 'UTF-8');
+                        $safe_type = htmlspecialchars($value['type'], ENT_QUOTES, 'UTF-8');
+                        $safe_time = htmlspecialchars($value['time'], ENT_QUOTES, 'UTF-8');
+                        $safe_type_lower = htmlspecialchars(strtolower($value['type']), ENT_QUOTES, 'UTF-8');
                         echo '<tr>
-								<td>' . $value['name'] . '</td>
-								<td class="center">' . $value['type'] . '</td>
-								<td class="center">' . $value['time'] . '</td>
+								<td>' . $safe_name . '</td>
+								<td class="center">' . $safe_type . '</td>
+								<td class="center">' . $safe_time . '</td>
 								<td class="center">
-									<a class="btn btn-info" href="' . $this->config->base_url . 'gmcp/unban/' . strtolower($value['type']) . '/' . $value['name'] . '">
-										<i class="icon-edit icon-white"></i>  
-										Unban                                           
+									<a class="btn btn-info" href="' . $this->config->base_url . 'gmcp/unban/' . $safe_type_lower . '/' . $safe_name . '">
+										<i class="icon-edit icon-white"></i>
+										Unban
 									</a>
-								</td>  
+								</td>
 							  </tr>';
                     }
                     echo '</tbody></table>';

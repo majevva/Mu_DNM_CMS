@@ -28,6 +28,7 @@
             </div>
             <div class="box-content">
                 <form class="form-horizontal" method="POST" action="">
+                    <?php $this->csrf->writeToken(); ?>
                     <fieldset>
                         <legend>Find user and edit credits.</legend>
                         <div class="control-group">
@@ -36,7 +37,7 @@
                             <div class="controls">
                                 <input type="text" class="typeahead" id="username" name="username"
                                        value="<?php if ($acc != '') {
-                                           echo $acc;
+                                           echo htmlspecialchars($acc, ENT_QUOTES, 'UTF-8');
                                        } ?>"/>
                             </div>
                         </div>
@@ -134,7 +135,7 @@
                         <tbody>
                         <?php foreach ($similar_accounts as $key => $value): ?>
                             <tr>
-                                <td><?php echo $similar_accounts[$key]['memb___id']; ?></td>
+                                <td><?php echo htmlspecialchars($similar_accounts[$key]['memb___id'], ENT_QUOTES, 'UTF-8'); ?></td>
                                 <td><a class="btn btn-success"
                                        href="<?php echo $this->config->base_url; ?>admincp/credits-editor/<?php echo $similar_accounts[$key]['memb___id']; ?>"><i
                                             class="icon-edit icon-white"></i> Add Credits</a></td>
@@ -167,6 +168,7 @@
             </div>
             <div class="box-content">
                 <form class="form-horizontal" method="POST" action="">
+                    <?php $this->csrf->writeToken(); ?>
                     <fieldset>
                         <legend>Find user and view credits.</legend>
                         <div class="control-group">
@@ -175,7 +177,7 @@
                             <div class="controls">
                                 <input type="text" class="typeahead" id="username" name="username"
                                        value="<?php if ($acc != '') {
-                                           echo $acc;
+                                           echo htmlspecialchars($acc, ENT_QUOTES, 'UTF-8');
                                        } ?>"/>
                             </div>
                         </div>

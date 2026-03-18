@@ -13,6 +13,7 @@
                 <div class="form">
                     <form method="post" action="<?php echo $this->config->base_url; ?>settings"
                           id="password_change_form">
+                        <?php $this->csrf->writeToken(); ?>
                         <table>
                             <tr>
                                 <td style="width:150px;"><?php echo _('Old Password'); ?>:</td>
@@ -51,6 +52,7 @@
                     <div class="form">
                         <form method="post" action="<?php echo $this->config->base_url; ?>settings"
                               id="email_change_form">
+                        <?php $this->csrf->writeToken(); ?>
                             <table>
                                 <tr>
                                     <td style="width:150px;"><?php echo _('Current Email'); ?>
@@ -88,6 +90,7 @@
                     <div class="form">
                         <form method="post" action="<?php echo $this->config->base_url; ?>settings"
                               id="recover_master_key">
+                        <?php $this->csrf->writeToken(); ?>
                             <table>
                                 <tr>
                                     <td style="width:150px;"></td>

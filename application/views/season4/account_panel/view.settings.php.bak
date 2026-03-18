@@ -13,30 +13,31 @@
                 <div class="form">
                     <form method="post" action="<?php echo $this->config->base_url; ?>settings"
                           id="password_change_form">
-                        <?php $this->csrf->writeToken(); ?>
                         <table>
                             <tr>
-                                <td style="width:150px;"><?php echo _('Old Password'); ?>:</td>
-                                <td><input
-                                        class="validate[required,minSize[<?php echo $config['min_password']; ?>],maxSize[<?php echo $config['max_password']; ?>]]"
-                                        type="password" name="old_password" id="old_password" value=""/></td>
+                                <td style="width:150px;"><?php echo _('Old Password'); ?>
+                                    :
+                                </td>
+                                <td><input class="validate[required,minSize[3],maxSize[20]]" type="password"
+                                           name="old_password" id="old_password" value=""/></td>
                             </tr>
                             <tr>
                                 <td><?php echo _('New Password'); ?>:</td>
-                                <td><input
-                                        class="validate[required,minSize[<?php echo $config['min_password']; ?>],maxSize[<?php echo $config['max_password']; ?>]]"
-                                        type="password" name="new_password" id="new_password" value=""/></td>
+                                <td><input class="validate[required,minSize[3],maxSize[20]]" type="password"
+                                           name="new_password" id="new_password" value=""/></td>
                             </tr>
                             <tr>
-                                <td><?php echo _('Repeat New Password'); ?>:</td>
-                                <td><input
-                                        class="validate[required,minSize[<?php echo $config['min_password']; ?>],maxSize[<?php echo $config['max_password']; ?>],equals[new_password]]"
-                                        type="password" name="new_password2" id="new_password2" value=""/></td>
+                                <td><?php echo _('Repeat New Password'); ?>
+                                    :
+                                </td>
+                                <td><input class="validate[required,minSize[3],maxSize[20],equals[new_password]]"
+                                           type="password" name="new_password2" id="new_password2" value=""/></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>
-                                    <button type="submit" class="btn-enter auth"><?php echo _('Submit'); ?></button>
+                                    <button type="submit"
+                                            class="button-style"><?php echo _('Submit'); ?></button>
                                 </td>
                             </tr>
                         </table>
@@ -52,7 +53,6 @@
                     <div class="form">
                         <form method="post" action="<?php echo $this->config->base_url; ?>settings"
                               id="email_change_form">
-                        <?php $this->csrf->writeToken(); ?>
                             <table>
                                 <tr>
                                     <td style="width:150px;"><?php echo _('Current Email'); ?>
@@ -65,7 +65,7 @@
                                     <td></td>
                                     <td>
                                         <button type="submit"
-                                                class="btn-enter auth"><?php echo _('Submit'); ?></button>
+                                                class="button-style"><?php echo _('Submit'); ?></button>
                                     </td>
                                 </tr>
                             </table>
@@ -90,7 +90,6 @@
                     <div class="form">
                         <form method="post" action="<?php echo $this->config->base_url; ?>settings"
                               id="recover_master_key">
-                        <?php $this->csrf->writeToken(); ?>
                             <table>
                                 <tr>
                                     <td style="width:150px;"></td>
@@ -99,7 +98,7 @@
                                 <tr>
                                     <td></td>
                                     <td>
-                                        <button type="submit" class="btn-enter auth"
+                                        <button type="submit" class="button-style"
                                                 name="recover_master_key"><?php echo _('Submit'); ?></button>
                                     </td>
                                 </tr>

@@ -4,31 +4,30 @@
 <div id="content">
     <div id="box1">
         <div class="title1">
-            <h1><?php echo _('Account Settings'); ?></h1>
+            <h1><?php echo __('Account Settings'); ?></h1>
         </div>
         <div class="box-style1" style="margin-bottom: 20px;">
-            <h2 class="title"><?php echo _('Change Password'); ?></h2>
+            <h2 class="title"><?php echo __('Change Password'); ?></h2>
 
             <div class="entry">
                 <div class="form">
                     <form method="post" action="<?php echo $this->config->base_url; ?>settings"
                           id="password_change_form">
-                        <?php $this->csrf->writeToken(); ?>
                         <table>
                             <tr>
-                                <td style="width:150px;"><?php echo _('Old Password'); ?>:</td>
+                                <td style="width:150px;"><?php echo __('Old Password'); ?>:</td>
                                 <td><input
                                         class="validate[required,minSize[<?php echo $config['min_password']; ?>],maxSize[<?php echo $config['max_password']; ?>]]"
                                         type="password" name="old_password" id="old_password" value=""/></td>
                             </tr>
                             <tr>
-                                <td><?php echo _('New Password'); ?>:</td>
+                                <td><?php echo __('New Password'); ?>:</td>
                                 <td><input
                                         class="validate[required,minSize[<?php echo $config['min_password']; ?>],maxSize[<?php echo $config['max_password']; ?>]]"
                                         type="password" name="new_password" id="new_password" value=""/></td>
                             </tr>
                             <tr>
-                                <td><?php echo _('Repeat New Password'); ?>:</td>
+                                <td><?php echo __('Repeat New Password'); ?>:</td>
                                 <td><input
                                         class="validate[required,minSize[<?php echo $config['min_password']; ?>],maxSize[<?php echo $config['max_password']; ?>],equals[new_password]]"
                                         type="password" name="new_password2" id="new_password2" value=""/></td>
@@ -36,7 +35,7 @@
                             <tr>
                                 <td></td>
                                 <td>
-                                    <button type="submit" class="btn-enter auth"><?php echo _('Submit'); ?></button>
+                                    <button type="submit" class="button-style"><?php echo __('Submit'); ?></button>
                                 </td>
                             </tr>
                         </table>
@@ -46,16 +45,15 @@
         </div>
         <?php if($this->config->config_entry('account|allow_mail_change') == 1){ ?>
             <div class="box-style1" style="margin-bottom: 20px;">
-                <h2 class="title"><?php echo _('Change Email'); ?></h2>
+                <h2 class="title"><?php echo __('Change Email'); ?></h2>
 
                 <div class="entry">
                     <div class="form">
                         <form method="post" action="<?php echo $this->config->base_url; ?>settings"
                               id="email_change_form">
-                        <?php $this->csrf->writeToken(); ?>
                             <table>
                                 <tr>
-                                    <td style="width:150px;"><?php echo _('Current Email'); ?>
+                                    <td style="width:150px;"><?php echo __('Current Email'); ?>
                                         :
                                     </td>
                                     <td><input class="validate[required,custom[email],maxSize[50]]" type="email"
@@ -65,7 +63,7 @@
                                     <td></td>
                                     <td>
                                         <button type="submit"
-                                                class="btn-enter auth"><?php echo _('Submit'); ?></button>
+                                                class="button-style"><?php echo __('Submit'); ?></button>
                                     </td>
                                 </tr>
                             </table>
@@ -76,7 +74,7 @@
         <?php } ?>
         <?php if($this->config->config_entry('account|allow_recover_masterkey') == 1){ ?>
             <div class="box-style1" style="margin-bottom: 20px;">
-                <h2 class="title"><?php echo _('Recover Master Key'); ?></h2>
+                <h2 class="title"><?php echo __('Recover Master Key'); ?></h2>
 
                 <div class="entry">
                     <?php
@@ -90,17 +88,16 @@
                     <div class="form">
                         <form method="post" action="<?php echo $this->config->base_url; ?>settings"
                               id="recover_master_key">
-                        <?php $this->csrf->writeToken(); ?>
                             <table>
                                 <tr>
                                     <td style="width:150px;"></td>
-                                    <td><?php echo _('Recover your master key if you have forgotten it.'); ?></td>
+                                    <td><?php echo __('Recover your master key if you have forgotten it.'); ?></td>
                                 </tr>
                                 <tr>
                                     <td></td>
                                     <td>
-                                        <button type="submit" class="btn-enter auth"
-                                                name="recover_master_key"><?php echo _('Submit'); ?></button>
+                                        <button type="submit" class="button-style"
+                                                name="recover_master_key"><?php echo __('Submit'); ?></button>
                                     </td>
                                 </tr>
                             </table>

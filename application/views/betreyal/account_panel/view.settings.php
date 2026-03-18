@@ -12,6 +12,7 @@ $this->load->view($this->config->config_entry('main|template') . DS . 'view.head
             <div class="entry">
                 <div class="form">
                     <form method="post" action="<?php echo $this->config->base_url; ?>settings" id="password_change_form">
+                        <?php $this->csrf->writeToken(); ?>
                         <table>
                              <tr>
                                 <td style="width:150px;"><?php echo _('Old Password'); ?>:</td>
@@ -44,6 +45,7 @@ $this->load->view($this->config->config_entry('main|template') . DS . 'view.head
                     <div class="form">
                         <form method="post" action="<?php echo $this->config->base_url; ?>settings"
                               id="email_change_form">
+                        <?php $this->csrf->writeToken(); ?>
                             <table>
                                 <tr>
                                     <td style="width:150px;"><?php echo _('Current Email'); ?>
@@ -81,6 +83,7 @@ $this->load->view($this->config->config_entry('main|template') . DS . 'view.head
                     <div class="form">
                         <form method="post" action="<?php echo $this->config->base_url; ?>settings"
                               id="recover_master_key">
+                        <?php $this->csrf->writeToken(); ?>
                             <table>
                                 <tr>
                                     <td style="width:150px;"></td>
